@@ -2,7 +2,6 @@ const catchError = require('../utils/catchError');
 const User = require('../models/User');
 
 const getAll = catchError(async(req, res) => {
-    // Operaciones...
     const users = await User.findAll();
     return res.json(users);
 });
